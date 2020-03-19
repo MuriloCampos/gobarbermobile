@@ -58,7 +58,7 @@ function newSchedule({ navigation }) {
           ),
         }}
       />
-      <Stack.Screen name="Confirm" component={Confirm} />
+      <Stack.Screen name="Confirmar Agendamento" component={Confirm} />
     </Stack.Navigator>
   );
 }
@@ -90,6 +90,7 @@ export default function Routes({ isLoggedIn }) {
             name="Agendar"
             component={newSchedule}
             options={{
+              unmountOnBlur: true,
               tabBarLabel: 'Agendar',
               tabBarVisible: false,
               tabBarIcon: ({ color, size }) => (
